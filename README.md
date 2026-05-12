@@ -1,67 +1,122 @@
-# Unboxd Cloud Platform Architecture
+# Unboxd Cloud
 
-> A Cloud For Common Man | Built and deployed globally by Autonomyx
+Enterprise Composable Agentic Cloud Native Platform.
 
 ## Overview
 
-Unboxd Cloud is a comprehensive enterprise SaaS platform comprising multiple SaaS products organized by category.
+Unboxd Cloud is an enterprise platform for building composable private cloud, edge cloud, and hybrid cloud environments using open-source infrastructure and agent-managed operations.
 
-**Live Platform:** https://unboxd.cloud
+The platform combines infrastructure, identity, APIs, storage, observability, publishing, commerce, and operational services into a modular cloud-native ecosystem.
 
-## Quick Links
+## Core Platform Architecture
 
-- [Platform Architecture Spec](./PLATFORM_ARCHITECTURE.md)
-- [Commerce Platform](https://marketplace.unboxd.cloud)
-- [Auth Server](https://authserver.unboxd.cloud)
-- [Project Management](https://github.com/unboxd-cloud/projecttrack)
-- [Edge Cloud](https://github.com/unboxd-cloud/edge)
+### Enterprise Cloud Foundation
 
-## Platform Catalog (Hyperlocal First)
+- OpenStack Private Cloud
+- MicroCloud Edge Cloud
+- Apache CloudStack Hybrid Cloud
+- S3-Compatible Object Storage
 
-| # | Platform | Repo | Org |
-|---|----------|------|-----|
-| 1 | Commerce/E-commerce | `commerce` | unboxd-cloud |
-| 2 | Real Estate Management | openautonomyx/localstays | openautonomyx |
-| 3 | Travel & Hospitality | `travel-hospitality` | unboxd-cloud *(to create)* |
-| 4 | Restaurant Management | `restaurant-management` | unboxd-cloud *(to create)* |
-| 5 | Retail SaaS Platform | `retail-saas-platform` | unboxd-cloud *(to create)* |
-| 6 | Hyperlocal Services | `hyperlocal-services` | unboxd-cloud *(to create)* |
-| 7 | Hyperlocal Social Network | `hyperlocal-social` | unboxd-cloud *(to create)* |
-| 8 | Hyperlocal Privacy Networking | `hyperlocal-privacy` | unboxd-cloud *(to create)* |
-| 9 | Google Maps Agent | openautonomyx/Mapr | openautonomyx |
-| 10 | Verified Services | `verified-services` | unboxd-cloud *(to create)* |
-| 11 | Swymsetu | `swymsetu` | unboxd-cloud *(to create)* |
-| 12 | TechForTomorrow | `techfortomorrow` | unboxd-cloud *(to create)* |
-| 13 | CrowdFunding Platform | `crowdfund-platform` | unboxd-cloud *(to create)* |
+### Cloud Native Operations
 
-## Common Infrastructure
+- Podman Container Management
+- Harbor Container Registry
+- Apache APISIX Gateway
+- Edge Workload Distribution
 
-| Component | Description |
+### Identity & Communication
+
+- Keycloak IAM
+- Logto SSO
+- Stalwart Mail Infrastructure
+- Novu Notifications
+
+### Observability & Reliability
+
+- SigNoz Observability
+- GlitchTip Error Tracking
+- Monitoring & Operational Visibility
+
+### Composable Application Services
+
+- WordPress CMS
+- WooCommerce Commerce
+- Ghost Publishing
+- Postiz Social Publishing
+
+### Agentic Operations Layer
+
+- Service-specific operational agents
+- Agent orchestration
+- Operational automation
+- Infrastructure lifecycle management
+
+## Deployment Models
+
+| Deployment | Description |
 |------------|-------------|
-| Unboxd Auth Server | OAuth 2.0, OIDC, SAML - https://authserver.unboxd.cloud |
-| Unboxd Mail Server | SMTP email services |
-| Unboxd Commerce | E-commerce & marketplace - https://marketplace.unboxd.cloud |
+| Private Cloud | Dedicated enterprise cloud environments using OpenStack |
+| Edge Cloud | Distributed edge-native infrastructure powered by MicroCloud |
+| Hybrid Cloud | Multi-environment infrastructure powered by Apache CloudStack |
+| Composable Cloud | Modular infrastructure and service composition |
 
-## Deployment Options
+## Enterprise Characteristics
 
-| Option | Description |
-|--------|-------------|
-| Cloud | Managed SaaS anywhere |
-| Self-Hosted | Self-host anywhere |
-| Decentralized | Distributed deployment |
-| Enterprise | Enterprise SaaS |
-| Composable | Mix and match components |
-| Micro Cloud | Edge + small footprint |
-| Private Cloud | OpenStack deployment |
-| Hybrid Cloud | CloudStack deployment |
+- Multi-tenant architecture
+- Cloud-native platform design
+- Hybrid and edge deployment support
+- Identity and access management
+- API-first infrastructure
+- Operational observability
+- Open-source infrastructure foundation
+- Agent-managed operational workflows
 
-## Target Audience
+## Development
 
-- Individual (single business owners, freelancers)
-- SMB (small to medium businesses)
-- Enterprise (large organizations)
-- Government (public sector)
+### Install
 
----
+```bash
+npm install
+```
 
-For detailed platform specifications, see [PLATFORM_ARCHITECTURE.md](./PLATFORM_ARCHITECTURE.md)
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Production build
+
+```bash
+npm run build
+```
+
+## GitHub Pages Deployment
+
+The website is configured for static export deployment through GitHub Pages.
+
+Enable:
+
+```txt
+Repository → Settings → Pages → Source → GitHub Actions
+```
+
+Deployment URL:
+
+```txt
+https://unboxd-cloud.github.io/website/
+```
+
+## Platform Documentation
+
+See:
+
+- `PLATFORM_ARCHITECTURE.md`
+- `README.md`
+- `app/page.tsx`
+
+## Organization
+
+GitHub Organization:
+
+https://github.com/unboxd-cloud
