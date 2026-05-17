@@ -1,0 +1,1 @@
+export default function CaseStudiesPage() { return <main className="mx-auto max-w-5xl px-6 py-24"><h1 className="text-5xl font-black">Case studies and platform implementations.</h1><p className="mt-6 text-xl text-zinc-300">Coming soon.</p></main>; }
