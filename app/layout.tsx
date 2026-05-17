@@ -1,48 +1,34 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Header, Footer } from './components/SiteShell';
 
-const siteUrl = 'https://unboxd-cloud.github.io/website/';
+const siteUrl = 'https://unboxd.cloud';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Unboxd Cloud | Enterprise Composable Cloud Native Platform',
   description:
     'Enterprise composable agentic cloud native platform for private cloud, edge cloud, hybrid cloud, identity, storage, APIs, observability, and autonomous operations.',
-  keywords: [
-    'enterprise cloud platform',
-    'composable cloud',
-    'agentic cloud',
-    'private cloud',
-    'edge cloud',
-    'hybrid cloud',
-    'OpenStack',
-    'Apache CloudStack',
-    'MicroCloud',
-    'cloud native',
-  ],
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
     title: 'Unboxd Cloud',
-    description:
-      'Build, compose, and operate enterprise cloud platforms from end to end.',
+    description: 'Agentic cloud solutions delivered at the edge.',
     url: siteUrl,
     siteName: 'Unboxd Cloud',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Unboxd Cloud',
-    description:
-      'Enterprise composable cloud native platform for private, edge, hybrid, and agent-managed operations.',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-[#050816] text-white">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
