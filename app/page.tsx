@@ -1,41 +1,52 @@
 const platformLayers = [
   {
     title: 'Enterprise Cloud Foundation',
-    description: 'Private, edge, and hybrid cloud infrastructure for regulated, distributed, and mission-critical environments.',
-    items: ['OpenStack Private Cloud', 'MicroCloud Edge Cloud', 'Apache CloudStack Hybrid Cloud', 'S3-Compatible Object Storage'],
+    description:
+      'Deploy private, edge, and hybrid cloud foundations for regulated, distributed, and mission-critical environments.',
+    items: [
+      'OpenStack Private Cloud',
+      'MicroCloud Edge Cloud',
+      'Apache CloudStack Hybrid Cloud',
+      'S3-Compatible Object Storage',
+    ],
   },
   {
     title: 'Cloud Native Operations',
-    description: 'Container lifecycle, image distribution, API routing, workload delivery, and service automation.',
+    description:
+      'Manage containers, registries, APIs, workload placement, and service automation across the full platform lifecycle.',
     items: ['Podman Container Management', 'Harbor Registry', 'Apache APISIX Gateway', 'Edge Workload Delivery'],
   },
   {
     title: 'Identity, Access & Communication',
-    description: 'Enterprise authentication, single sign-on, mail infrastructure, access control, and notification services.',
+    description:
+      'Unify authentication, SSO, mail, access control, and notifications for internal teams and external users.',
     items: ['Keycloak IAM', 'Logto SSO', 'Stalwart Mail Server', 'Novu Notifications'],
   },
   {
     title: 'Observability & Reliability',
-    description: 'Monitoring, traces, logs, errors, service health, and operational visibility for distributed systems.',
+    description:
+      'Track metrics, traces, logs, errors, service health, and operational signals across distributed environments.',
     items: ['SigNoz Observability', 'GlitchTip Error Tracking', 'Service Health', 'Operational Alerts'],
   },
   {
     title: 'Composable Application Services',
-    description: 'Enterprise application capabilities delivered as modular platform services across content, commerce, and publishing.',
+    description:
+      'Add content, commerce, publishing, and application services as modular capabilities on top of the cloud foundation.',
     items: ['WordPress CMS', 'WooCommerce Commerce', 'Ghost Publishing', 'Postiz Social Publishing'],
   },
   {
     title: 'Agentic Operations Layer',
-    description: 'Service-specific agents for deployment, management, monitoring, troubleshooting, optimization, and governance.',
+    description:
+      'Pair service domains with operational agents for deployment, management, monitoring, optimization, and governance.',
     items: ['Service Agents', 'Agent Orchestration', 'Tool Registry', 'Agent Monitoring'],
   },
 ];
 
 const deploymentModels = [
-  ['Private Cloud', 'Dedicated enterprise infrastructure powered by OpenStack for controlled environments.'],
-  ['Edge Cloud', 'Small-footprint distributed cloud infrastructure powered by MicroCloud for edge locations.'],
+  ['Private Cloud', 'Dedicated OpenStack-based enterprise infrastructure for controlled environments.'],
+  ['Edge Cloud', 'Small-footprint distributed infrastructure powered by MicroCloud for edge locations.'],
   ['Hybrid Cloud', 'Apache CloudStack-based infrastructure spanning private, hosted, and distributed environments.'],
-  ['Composable Cloud', 'A modular architecture where infrastructure, identity, storage, APIs, observability, and applications are assembled as required.'],
+  ['Composable Cloud', 'A modular cloud model where infrastructure, identity, APIs, storage, observability, and apps are assembled as required.'],
 ];
 
 const enterpriseCapabilities = [
@@ -50,7 +61,7 @@ const enterpriseCapabilities = [
 ];
 
 const processSteps = [
-  ['01', 'Assess', 'Map infrastructure, identity, application, data, and operational requirements.'],
+  ['01', 'Assess', 'Map infrastructure, identity, application, data, security, and operational requirements.'],
   ['02', 'Compose', 'Select the cloud, edge, identity, storage, API, observability, and application services required.'],
   ['03', 'Deploy', 'Ship the composed platform across private, edge, hybrid, or modular environments.'],
   ['04', 'Operate', 'Use service agents, telemetry, alerts, and governance workflows to manage the platform continuously.'],
@@ -63,6 +74,29 @@ const useCases = [
   'Internal developer and platform engineering environments',
   'Agent-assisted infrastructure operations',
   'Composable publishing, commerce, and application stacks',
+];
+
+const services = [
+  'OpenStack',
+  'MicroCloud',
+  'Apache CloudStack',
+  'S3 Storage',
+  'Podman',
+  'Harbor',
+  'Keycloak',
+  'Logto',
+  'Stalwart Mail',
+  'APISIX',
+  'SigNoz',
+  'GlitchTip',
+  'Novu',
+  'WordPress',
+  'WooCommerce',
+  'Ghost',
+  'Postiz',
+  'Agent Platform',
+  'Model Runner',
+  'MCP Gateway',
 ];
 
 export default function Home() {
@@ -90,7 +124,7 @@ export default function Home() {
             Build, compose, and operate enterprise cloud platforms from end to end.
           </h1>
           <p className="mt-10 max-w-4xl text-xl leading-relaxed text-zinc-300">
-            Unboxd Cloud brings private cloud, edge cloud, hybrid cloud, identity, storage, APIs, observability, publishing, commerce, and agentic operations into one modular enterprise platform.
+            Unboxd Cloud brings private cloud, edge cloud, hybrid cloud, identity, storage, APIs, observability, publishing, commerce, and agentic operations into one modular platform for teams that need control without complexity.
           </p>
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <a href="#contact" className="rounded-full bg-cyan-400 px-7 py-4 text-center font-semibold text-[#050816] hover:bg-cyan-300">Start a deployment</a>
@@ -109,7 +143,9 @@ export default function Home() {
           <div className="mb-14 max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Platform Architecture</p>
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">A layered enterprise cloud platform.</h2>
-            <p className="mt-6 text-lg leading-relaxed text-zinc-400">Each layer can run independently or combine into a governed end-to-end enterprise cloud environment.</p>
+            <p className="mt-6 text-lg leading-relaxed text-zinc-400">
+              Each layer can run independently or combine into a governed end-to-end enterprise cloud environment.
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {platformLayers.map((layer) => (
@@ -117,7 +153,9 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold">{layer.title}</h3>
                 <p className="mt-4 leading-relaxed text-zinc-400">{layer.description}</p>
                 <div className="mt-6 space-y-3">
-                  {layer.items.map((item) => <div key={item} className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-zinc-300">{item}</div>)}
+                  {layer.items.map((item) => (
+                    <div key={item} className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-zinc-300">{item}</div>
+                  ))}
                 </div>
               </article>
             ))}
@@ -130,10 +168,17 @@ export default function Home() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Deployment Models</p>
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Designed for enterprise deployment flexibility.</h2>
-            <p className="mt-6 text-lg leading-relaxed text-zinc-400">Deploy controlled private environments, distributed edge locations, hybrid estates, or modular service stacks with an open-source foundation.</p>
+            <p className="mt-6 text-lg leading-relaxed text-zinc-400">
+              Deploy controlled private environments, distributed edge locations, hybrid estates, or modular service stacks with an open-source foundation.
+            </p>
           </div>
           <div className="grid gap-5">
-            {deploymentModels.map(([title, description]) => <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7"><h3 className="text-2xl font-semibold">{title}</h3><p className="mt-3 text-zinc-400">{description}</p></div>)}
+            {deploymentModels.map(([title, description]) => (
+              <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+                <h3 className="text-2xl font-semibold">{title}</h3>
+                <p className="mt-3 text-zinc-400">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -145,7 +190,9 @@ export default function Home() {
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">A composable catalog of infrastructure and application services.</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {['OpenStack','MicroCloud','Apache CloudStack','S3 Storage','Podman','Harbor','Keycloak','Logto','Stalwart Mail','APISIX','SigNoz','GlitchTip','Novu','WordPress','WooCommerce','Ghost','Postiz','Agent Platform','Model Runner','MCP Gateway'].map((service) => <div key={service} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 text-zinc-200">{service}</div>)}
+            {services.map((service) => (
+              <div key={service} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 text-zinc-200">{service}</div>
+            ))}
           </div>
         </div>
       </section>
@@ -156,28 +203,54 @@ export default function Home() {
           <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">From assessment to ongoing operations.</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {processSteps.map(([number, title, description]) => <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7"><div className="text-sm font-bold text-cyan-300">{number}</div><h3 className="mt-5 text-2xl font-semibold">{title}</h3><p className="mt-4 text-zinc-400">{description}</p></div>)}
+          {processSteps.map(([number, title, description]) => (
+            <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+              <div className="text-sm font-bold text-cyan-300">{number}</div>
+              <h3 className="mt-5 text-2xl font-semibold">{title}</h3>
+              <p className="mt-4 text-zinc-400">{description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="agents" className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Agentic Operations</p><h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Operational agents for every service domain.</h2></div>
-            <div className="space-y-5 text-lg leading-relaxed text-zinc-400"><p>Agents assist with provisioning, configuration, monitoring, remediation, scaling, documentation, and lifecycle management.</p><p>The agentic layer extends platform teams with repeatable automation while keeping governance, access, and enterprise control in place.</p></div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Agentic Operations</p>
+              <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Operational agents for every service domain.</h2>
+            </div>
+            <div className="space-y-5 text-lg leading-relaxed text-zinc-400">
+              <p>Agents assist with provisioning, configuration, monitoring, remediation, scaling, documentation, and lifecycle management.</p>
+              <p>The agentic layer extends platform teams with repeatable automation while keeping governance, access, and enterprise control in place.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mb-12 max-w-4xl"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Use Cases</p><h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Built for teams modernizing infrastructure and operations.</h2></div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">{useCases.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-zinc-300">{item}</div>)}</div>
+        <div className="mb-12 max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Use Cases</p>
+          <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Built for teams modernizing infrastructure and operations.</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {useCases.map((item) => (
+            <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-zinc-300">{item}</div>
+          ))}
+        </div>
       </section>
 
       <section id="enterprise" className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="mb-12 max-w-4xl"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Enterprise Characteristics</p><h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Control, extensibility, and operational depth.</h2></div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">{enterpriseCapabilities.map((capability) => <div key={capability} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-zinc-300">{capability}</div>)}</div>
+          <div className="mb-12 max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Enterprise Characteristics</p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Control, extensibility, and operational depth.</h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {enterpriseCapabilities.map((capability) => (
+              <div key={capability} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-zinc-300">{capability}</div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -185,12 +258,16 @@ export default function Home() {
         <div className="rounded-[2rem] border border-cyan-400/20 bg-cyan-400/10 p-10 md:p-14">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Contact</p>
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Ready to compose your cloud platform?</h2>
-          <p className="mt-6 max-w-3xl text-lg text-zinc-300">Talk to Unboxd Cloud about private cloud, edge cloud, hybrid cloud, platform engineering, and agent-managed operations.</p>
+          <p className="mt-6 max-w-3xl text-lg text-zinc-300">
+            Talk to Unboxd Cloud about private cloud, edge cloud, hybrid cloud, platform engineering, and agent-managed operations.
+          </p>
           <a href="mailto:hello@unboxd.cloud" className="mt-8 inline-flex rounded-full bg-cyan-400 px-7 py-4 font-semibold text-[#050816] hover:bg-cyan-300">hello@unboxd.cloud</a>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">© 2026 Unboxd Cloud · Enterprise Composable Agentic Cloud Native Platform</footer>
+      <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">
+        © 2026 Unboxd Cloud · Enterprise Composable Agentic Cloud Native Platform
+      </footer>
     </main>
   );
 }
