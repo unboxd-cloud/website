@@ -63,6 +63,24 @@ export default function TestcontainersBlogPage() {
         />
 
         <section className="prose prose-invert prose-zinc mt-14 max-w-none prose-headings:text-white prose-p:text-zinc-300 prose-strong:text-white">
+          <p>
+            If you&apos;ve ever written integration tests that depend on a database, cache, or message broker,
+            you&apos;ve probably faced a familiar dilemma:
+          </p>
+          <ul>
+            <li>Should you mock the dependency and risk missing real issues?</li>
+            <li>Should you maintain a shared test environment and deal with flaky tests?</li>
+            <li>Should you install services manually on every developer machine?</li>
+          </ul>
+          <p>Testcontainers solves this problem elegantly.</p>
+          <p>In this article, we&apos;ll cover:</p>
+          <ul>
+            <li>What Testcontainers is</li>
+            <li>Why it matters</li>
+            <li>A real-world scenario where it shines</li>
+            <li>How it works in practice</li>
+          </ul>
+
           <h2>What Is Testcontainers?</h2>
           <p>
             Testcontainers is an open-source library that starts disposable Docker containers during your
