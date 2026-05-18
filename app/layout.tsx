@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Header, Footer } from './components/SiteShell';
 
-const siteUrl = 'https://unboxd.cloud';
+const siteUrl = 'https://site.unboxd.cloud';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
